@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block 'contenido' %}
+<div class="container p-5">
+  <p class="my-4 fs-3">Registro de usuarios.</p>
+  <div class="row text-center">
+    <div class="card col-12 col-md-6 col-lg-4 col-xl-3 mx-auto sin-borde">
+      <div class="card-body">
+        {% if not user.is_authenticated %}
+        <form method="post" class="">
+          {% csrf_token %} {{ form.as_p }}
+          <input
+            type="submit"
+            value="Regístrate"
+            class="btn boton-sesion my-3"
+          />
+        </form>
+        {% else %}
+        <div class="my-4 fs-3 alert alert-dark">
+          Ya eres un usuario registrado, {{ user.username }}.
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock 'contenido' %}

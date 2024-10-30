@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block 'contenido' %}
+<div class="container p-5 succes text-center">
+  <h3>¡Gracias por contactarte con OnlyFlans!</h3>
+  <h3>Te responderemos a la brevedad.</h3>
+  <a
+    role="button"
+    class="btn btn-primary boton-sesion mt-5"
+    href="{% url 'web:índice' %}"
+    >Volver al inicio</a
+  >
+</div>
+{% endblock 'contenido' %}
+
+<div class="container p-5 text-center">
+  <h3>Has cerrado tu sesión correctamente.</h3>
+  <a class="fs-5 logout mx-3" href="{% url 'web:índice' %}">Vuelve al Inicio</a>
+  |
+  <a class="fs-5 logout mx-3" href="{% url 'web:login' %}"
+    >Reinicia tu sesión</a
+  >
+</div>

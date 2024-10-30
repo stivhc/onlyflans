@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block 'contenido' %}
+<div class="container p-5" style="background-color: #087697;">
+    <p class="my-4 fs-3">Contacto.</p>
+
+    <form action="contacto" method="post" class="text-center">
+    {% csrf_token %}
+
+        {{ form.non_field_errors }}
+        <div class="mb-3 text-center">
+            <label for="{{ form.customer_name.id_for_label }}" class="form-label success fs-5 mb-0">
+                Nombre:
+            </label>
+            <div>
+                {{ form.customer_name }}
+            </div>
+            <div id="error-form">
+                {{ form.customer_name.errors }}
+            </div>
+        </div>
+        <div class="mb-3 text-center">
+            <label for="{{ form.customer_email.id_for_label }}" class="form-label success fs-5 mb-0">
+                Correo electrónico:
+            </label>
+            <div>
+                {{ form.customer_email }}
+            </div>
+            <div id="error-form">
+                {{ form.customer_email.errors }}
+            </div>
+        </div>
+        <div class="mb-3 text-center">
+            <label for="{{ form.message.id_for_label }}" class="form-label success fs-5 mb-0">
+                Ingresa tu consulta:
+            </label>
+            <div>
+                {{ form.message }}
+            </div>
+            <div id="error-form">
+                {{ form.message.errors }}
+            </div>
+        </div>
+        <input type="submit" value="Enviar" class="btn boton-sesion my-3">
+    </form>
+</div>
+{% endblock 'contenido' %}

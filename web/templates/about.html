@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acerca de Onlyflans</title>
-  </head>
-  <body>
-    <h1>Acerca de Onlyflans</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur exercitationem eveniet harum, soluta architecto consequatur! Ut consectetur explicabo, numquam sint officiis, saepe quaerat laborum possimus, cumque dignissimos fuga sit!</p>
-  </body>
-</html>
+{% extends 'base.html' %} {% block 'contenido' %}
+<div class="container p-5">
+  <p class="my-4 fs-3">Acerca de OnlyFlans...</p>
+  <p class="my-4 text-justify fs-5" id="lorem">
+    OnlyFlans es una empresa dedicada a endulzar la vida de nuestros clientes
+    con una gran variedad de postres y delicias de pastelería, con especialidad
+    en flanes artesanales que destacan por su calidad y sabor inigualable.
+    Fundada en 2021 en el corazón de Santiago de Chile, OnlyFlans surge como un
+    emprendimiento familiar, inspirado en la tradición y en el cariño por los
+    postres que reúne a las familias en momentos de alegría y celebración.
+    Ubicados en Providencia, a pasos del metro Parque Bustamante, trabajamos
+    cada día con el compromiso de ofrecer productos frescos y cuidadosamente
+    elaborados, utilizando ingredientes de la más alta calidad. Nos enorgullece
+    ser un lugar donde nuestros clientes pueden encontrar sabores auténticos y
+    disfrutar de un momento dulce en su día.
+  </p>
+  <p class="my-4 text-justify fs-5" id="lorem">
+    En OnlyFlans, creemos en la importancia de crear experiencias memorables a
+    través de nuestros postres. Ya sea para una celebración especial o
+    simplemente para un antojo, estamos aquí para hacer cada ocasión más dulce y
+    especial.
+  </p>
+</div>
+{% endblock 'contenido' %}

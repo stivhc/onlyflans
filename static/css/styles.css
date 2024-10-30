@@ -1,0 +1,87 @@
+body {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+header {
+  background-color: #222244;
+}
+
+/* Genera un arco en el límite superior del 'header' */
+.header {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
+}
+
+nav {
+  background-color: #fdfd96;
+  font-weight: 500;
+}
+
+.boton-sesion {
+  background-color: #222244;
+  border-color: #222244;
+  color: #ffffd0;
+}
+
+.boton-sesion:hover {
+  background-color: #212155;
+  border-color: #212155;
+  color: #ffffff;
+}
+
+.informacion {
+  background-color: #222244;
+  border-color: #222244;
+  color: #ffffd0;
+}
+
+.cont-text {
+  font-weight: 500;
+}
+
+.card-img {
+  height: 12rem;
+}
+
+.success {
+  color: #311818;
+  font-weight: 500;
+}
+
+.mensaje {
+  height: 100px;
+  width: 60vw;
+  vertical-align: top;
+}
+
+#lorem {
+  text-align: justify;
+}
+
+#error-form {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+.logout {
+  text-decoration: none;
+  color: #000068;
+  font-weight: 500;
+}
+
+.sin-borde {
+  border: none;
+}
+
+footer {
+  background-color: #bb9966;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-ico {
+  text-decoration: none;
+  color: #ffffff;
+}

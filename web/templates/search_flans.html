@@ -1,0 +1,13 @@
+<div class="mt-5 text">
+    <p class="my-4 fs-3">Encuentra tu flan:</p>
+    <form action="{% url 'web:búscalo' %}" method="post" clas="">
+        {% csrf_token %}
+        <div class="row ps-0 mx-0">
+            <div class="ps-0 mb-3 mb-lg-0 col-12 col-lg-9 col-xl-10">
+                <input class="me-4 form-control" type="search" placeholder="Encuentra tu flan..."
+                    aria-label="Encuentra tu flan" name="buscador">
+            </div>
+            <button class="btn boton-sesion ms-auto col-12 col-lg-3 col-xl-2" type="submit">Buscar</button>
+        </div>
+    </form>
+</div>

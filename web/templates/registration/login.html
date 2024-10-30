@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block 'contenido' %}
+
+{% block 'contenido' %}
+
+<div class="container p-5">
+
+  {% if form.errors %}
+
+  <div class="success fs-5">
+    <p>Tu nombre de usuario y/o contraseña no son reconocidos.</p>
+    <p>Por favor, inténtalo nuevamente.</p>
+  </div>
+
+  {% endif %}
+
+  {% if next %}
+
+  <div class="success fs-5">
+    {% if user.is_authenticated %}
+    <p>Tu cuenta no tiene acceso a este contenido.</p>
+    <p>Por favor, ingresa con una cuenta que pueda acceder a esta página.</p>
+    {% else %}
+    <p>Inicia sesión para poder acceder a esta página.</p>
+    {% endif %}
+  </div>
+
+  {% endif %}
+
+  <form method="post" action="{% url 'web:login' %}" class="text-center">
+    {% csrf_token %}
+    <div>
+      <label for="" class="form-label success fs-5">
+        Nombre de usuario:
+      </label>
+      <div>
+        {{ form.username }}
+      </div>
+    </div>
+    <div>
+      <label for="" class="form-label success fs-5">
+        Contraseña:
+      </label>
+      <div>
+        {{ form.password }}
+      </div>
+    </div>
+    <input type="submit" class="btn boton-sesion my-3" value="Iniciar sesión">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+
+
+</div>
+
+{% endblock 'contenido' %}
